@@ -24,9 +24,9 @@ export async function getContentData(fileName: string) {
     fileName,
     contentHtml,
     ...(matterResult.data as {
-      date: string;
       title: string;
       cats: { description: string; name: string }[];
     }),
+    date: new Date(matterResult.data.date).toUTCString() as string,
   };
 }

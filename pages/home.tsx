@@ -36,6 +36,7 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   const contentData = await getContentData("home");
+
   return {
     props: {
       contentData,
