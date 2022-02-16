@@ -1,10 +1,13 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import { GetStaticProps } from "next";
+import Head from "next/head";
+import Button from "@mui/material/Button";
+
+import { getSortedPostsData } from "../lib/posts";
+import Date from "../components/date";
+import Layout, { siteTitle } from "../components/layout";
+import Link, { NextLinkComposed } from "../components/Link";
+import utilStyles from "../styles/utils.module.css";
+import Divider from "@mui/material/Divider";
 
 export default function Home({
   allPostsData,
@@ -32,9 +35,7 @@ export default function Home({
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
+              <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
@@ -43,6 +44,15 @@ export default function Home({
           ))}
         </ul>
       </section>
+      <footer>
+        <Divider>Links</Divider>
+        <Link href="/home" color="secondary">
+          Go to the cats page
+        </Link>{" "}
+        <Button variant="contained" component={NextLinkComposed} to="/home">
+          Go To the Cats Page
+        </Button>
+      </footer>
     </Layout>
   );
 }
