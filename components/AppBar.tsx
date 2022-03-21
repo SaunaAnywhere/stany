@@ -11,6 +11,15 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import styled from "@emotion/styled";
+
+const StyledAppBar = styled(AppBar)`
+  background-color: #101011;
+`;
+
+const StyledToolbar = styled(Toolbar)`
+  height: 8em;
+`;
 
 const pages = ["Sauny", "Blog", "Eshop", "Kontakty"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -39,9 +48,9 @@ export default function ApplicationBar() {
   };
 
   return (
-    <AppBar position="static">
+    <StyledAppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <StyledToolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
@@ -136,8 +145,8 @@ export default function ApplicationBar() {
               ))}
             </Menu>
           </Box>
-        </Toolbar>
+        </StyledToolbar>
       </Container>
-    </AppBar>
+    </StyledAppBar>
   );
 }

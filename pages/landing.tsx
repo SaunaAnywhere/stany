@@ -1,3 +1,4 @@
+import { Container } from "@mui/material";
 import ApplicationBar from "../components/AppBar";
 import BlogPreview from "../components/BlogPreview";
 import ContentBox from "../components/ContentBox";
@@ -13,13 +14,15 @@ export default function Landing() {
     <>
       <ApplicationBar />
       <HeroSlider />
-      <ImgTextSlider />
-      <ContentBox />
-      <Options />
-      <SingleImage />
-      <ImageMasonry />
-      <BlogPreview />
-      <Footer />
+      <Container maxWidth="xl">
+        <ImgTextSlider />
+        <ContentBox />
+        <Options />
+        <SingleImage />
+        <ImageMasonry />
+        <BlogPreview />
+        <Footer />
+      </Container>
     </>
   );
 }
