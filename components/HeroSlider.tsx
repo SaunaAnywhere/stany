@@ -36,6 +36,7 @@ export default function HeroSlider() {
           <Image
             alt={`slide-${index}`}
             src={image}
+            // placeholder="blur"
             layout="fill"
             objectFit="cover"
           />
