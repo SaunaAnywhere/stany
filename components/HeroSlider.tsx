@@ -5,19 +5,19 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { Container } from "@mui/material";
-import styled from "@emotion/styled";
+import { styled } from "@mui/system";
 
-const StyledContainer = styled(Container)((props) => ({
+const StyledContainer = styled(Container)(({ theme }) => ({
   width: "100%",
   height: "10em",
 
-  [props.theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("sm")]: {
     height: "20em",
   },
-  [props.theme.breakpoints.up("md")]: {
+  [theme.breakpoints.up("md")]: {
     height: "30em",
   },
-  [props.theme.breakpoints.up("lg")]: {
+  [theme.breakpoints.up("lg")]: {
     height: "40em",
   },
 }));
