@@ -4,11 +4,11 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import "swiper/css/pagination";
 import { Container } from "@mui/material";
 import { styled } from "@mui/system";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
-  width: "100%",
   height: "10em",
 
   [theme.breakpoints.up("sm")]: {
@@ -18,9 +18,18 @@ const StyledContainer = styled(Container)(({ theme }) => ({
     height: "30em",
   },
   [theme.breakpoints.up("lg")]: {
-    height: "40em",
+    height: "50em",
   },
 }));
+
+const StyledSwiper = styled(Swiper)`
+  & .swiper-button-prev,
+  .swiper-button-next {
+    text-shadow: 0 0 0.2em black;
+    color: white;
+    font-weight: bold;
+  }
+`;
 
 const sliderImages = [
   "/images/slider/city.jpeg",
@@ -39,6 +48,7 @@ export default function HeroSlider() {
             // placeholder="blur"
             layout="fill"
             objectFit="cover"
+            priority={true}
           />
         </StyledContainer>
       </SwiperSlide>
@@ -46,7 +56,7 @@ export default function HeroSlider() {
   });
 
   return (
-    <Swiper
+    <StyledSwiper
       modules={[Navigation, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
@@ -54,6 +64,6 @@ export default function HeroSlider() {
       autoplay
     >
       {slides}
-    </Swiper>
+    </StyledSwiper>
   );
 }
