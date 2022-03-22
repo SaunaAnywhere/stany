@@ -10,13 +10,16 @@ import { styled } from "@mui/system";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   height: "10em",
+  position: "relative",
 
   [theme.breakpoints.up("sm")]: {
     height: "20em",
   },
+
   [theme.breakpoints.up("md")]: {
     height: "30em",
   },
+
   [theme.breakpoints.up("lg")]: {
     height: "50em",
   },
@@ -41,7 +44,7 @@ export default function HeroSlider() {
   const slides = sliderImages.map((image, index) => {
     return (
       <SwiperSlide key={index}>
-        <StyledContainer>
+        <StyledContainer maxWidth={false}>
           <Image
             alt={`slide-${index}`}
             src={image}
