@@ -10,7 +10,7 @@ const StyledBox = styled(Box)`
 `;
 
 const Option = styled(Box)`
-  padding: 2em;
+  padding: 0 2em;
   display: flex;
   justify-content: center;
 `;
@@ -19,7 +19,11 @@ const IconBox = styled(Box)`
   padding: 1em;
 `;
 
-const OptionContent = styled(Box)``;
+const OptionContent = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+`;
 
 export default function Options() {
   return (
