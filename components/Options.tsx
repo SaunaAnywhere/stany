@@ -10,7 +10,6 @@ const StyledBox = styled(Box)`
 `;
 
 const Option = styled(Box)`
-  /* width: 20em; */
   padding: 2em;
   display: flex;
   justify-content: center;
