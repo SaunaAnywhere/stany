@@ -26,7 +26,7 @@ export default function Options() {
     <StyledBox>
       <Option>
         <IconBox>
-          <WorkspacePremiumIcon />
+          <WorkspacePremiumIcon fontSize="large" />
         </IconBox>
         <OptionContent>
           <Typography variant="h5" fontWeight="500" component="div">
@@ -42,7 +42,7 @@ export default function Options() {
 
       <Option>
         <IconBox>
-          <LocalShippingIcon />
+          <LocalShippingIcon fontSize="large" />
         </IconBox>
         <OptionContent>
           <Typography variant="h5" fontWeight="500" component="div">
@@ -58,7 +58,7 @@ export default function Options() {
 
       <Option>
         <IconBox>
-          <QuickreplyIcon />
+          <QuickreplyIcon fontSize="large" />
         </IconBox>
         <OptionContent>
           <Typography variant="h5" fontWeight="500" component="div">
