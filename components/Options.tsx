@@ -10,7 +10,6 @@ const StyledBox = styled(Grid)`
 `;
 
 const Option = styled(Grid)`
-  padding: 0 2em;
   display: flex;
   justify-content: center;
 `;
