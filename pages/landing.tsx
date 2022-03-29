@@ -30,10 +30,10 @@ export default function Landing() {
           <SingleImage />
         </Grid>
         <Grid item xs={12}>
-          <ImageMasonry />
+          <BlogPreview />
         </Grid>
         <Grid item xs={12}>
-          <BlogPreview />
+          <ImageMasonry />
         </Grid>
         <Grid item xs={12}>
           <Footer />

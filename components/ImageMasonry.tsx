@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 
 const StyledContainer = styled(Grid)(({ theme }) => ({
