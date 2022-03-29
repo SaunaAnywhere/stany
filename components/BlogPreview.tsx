@@ -26,7 +26,7 @@ const BlogArticles = [
   },
   {
     title: "Blog title 3",
-    image: "/images/blog3.png",
+    image: "/images/blog3.jpeg",
     description:
       "Popularita saunovania pri jazerach ma svoje caro, chlieb, chladnicka a mnoho dalsich vyhod. Neprechldnete ani po 100 rokoch v stane.",
   },
@@ -38,7 +38,7 @@ const BlogArticles = [
   },
   {
     title: "Blog title 5",
-    image: "/images/blog3.png",
+    image: "/images/blog3.jpeg",
     description:
       "Popularita saunovania pri jazerach ma svoje caro, chlieb, chladnicka a mnoho dalsich vyhod. Neprechldnete ani po 100 rokoch v stane.",
   },
