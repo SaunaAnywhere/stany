@@ -1,15 +1,15 @@
 import styled from "@emotion/styled";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Typography, Grid } from "@mui/material";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import QuickreplyIcon from "@mui/icons-material/Quickreply";
 
-const StyledBox = styled(Box)`
+const StyledBox = styled(Grid)`
   display: flex;
   justify-content: center;
 `;
 
-const Option = styled(Box)`
+const Option = styled(Grid)`
   padding: 0 2em;
   display: flex;
   justify-content: center;
@@ -17,6 +17,8 @@ const Option = styled(Box)`
 
 const IconBox = styled(Box)`
   padding: 1em;
+  display: flex;
+  align-items: center;
 `;
 
 const OptionContent = styled(Box)`
@@ -27,8 +29,8 @@ const OptionContent = styled(Box)`
 
 export default function Options() {
   return (
-    <StyledBox>
-      <Option>
+    <StyledBox container>
+      <Option item sm={12} md={4} xl={3}>
         <IconBox>
           <WorkspacePremiumIcon fontSize="large" />
         </IconBox>
@@ -42,9 +44,7 @@ export default function Options() {
         </OptionContent>
       </Option>
 
-      <Divider orientation="vertical" flexItem />
-
-      <Option>
+      <Option item sm={12} md={4} xl={3}>
         <IconBox>
           <LocalShippingIcon fontSize="large" />
         </IconBox>
@@ -58,9 +58,7 @@ export default function Options() {
         </OptionContent>
       </Option>
 
-      <Divider orientation="vertical" flexItem />
-
-      <Option>
+      <Option item sm={12} md={4} xl={3}>
         <IconBox>
           <QuickreplyIcon fontSize="large" />
         </IconBox>
