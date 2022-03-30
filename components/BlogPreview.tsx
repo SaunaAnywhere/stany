@@ -11,6 +11,12 @@ const StyledGrid = styled(Grid)`
   justify-content: center;
 `;
 
+const StyledTitle = styled(Typography)`
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+`;
+
 const BlogArticles = [
   {
     title: "Blog title 1",
@@ -53,6 +59,9 @@ const BlogArticles = [
 export default function BlogPreview() {
   return (
     <Container>
+      <StyledTitle variant="h4" gutterBottom>
+        Z nášho blogu
+      </StyledTitle>
       <StyledGrid container spacing={3}>
         {BlogArticles.map((blog, index) => (
           <Grid item key={index}>
