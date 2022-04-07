@@ -8,13 +8,12 @@ import { Container, Grid, Typography, Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-  height: "10em",
+  height: "30em",
+  flexFlow: "wrap-reverse",
 
-  [theme.breakpoints.up("sm")]: {
-    height: "20em",
-  },
   [theme.breakpoints.up("md")]: {
     height: "30em",
+    flexFlow: "initial",
   },
   [theme.breakpoints.up("lg")]: {
     height: "40em",
@@ -35,6 +34,7 @@ const SliderText = styled(Box)`
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  padding: 0 2em;
 `;
 
 const StyledImageGridItem = styled(Grid)`
@@ -67,7 +67,7 @@ export default function HeroSlider() {
     return (
       <SwiperSlide key={index}>
         <StyledGrid container spacing={2}>
-          <StyledImageGridItem item xs={8}>
+          <StyledImageGridItem item xs={12} md={8}>
             <Image
               alt={`slide-${index}`}
               src={image.url}
@@ -76,11 +76,11 @@ export default function HeroSlider() {
               priority={true}
             />
           </StyledImageGridItem>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <SliderText>
               <Typography
-                variant="h2"
-                fontWeight="500"
+                variant="h4"
+                fontWeight="700"
                 component="div"
                 gutterBottom
               >

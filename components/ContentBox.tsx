@@ -10,11 +10,8 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { relative } from "node:path/win32";
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-  height: "10em",
+  height: "30em",
 
-  [theme.breakpoints.up("sm")]: {
-    height: "20em",
-  },
   [theme.breakpoints.up("md")]: {
     height: "30em",
   },
@@ -49,8 +46,8 @@ export default function ContentBox() {
   return (
     <StyledContainer>
       <Container maxWidth="xl">
-        <StyledGrid container spacing={2}>
-          <Grid item xs={4}>
+        <StyledGrid container>
+          <Grid item xs={12} md={4}>
             <SliderText>
               <Typography
                 variant="h2"
@@ -71,7 +68,7 @@ export default function ContentBox() {
               </StlyledButton>
             </SliderText>
           </Grid>
-          <StyledImageGridItem item xs={8}>
+          <StyledImageGridItem item xs={12} md={8}>
             <Image
               alt={`slide`}
               src="/images/slider/half/material.png"

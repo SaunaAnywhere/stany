@@ -16,7 +16,7 @@ const BlackContainer = styled(Box)`
 `;
 
 const StyledContainer = styled(Container)`
-  padding: 2em 0;
+  padding: 2em;
 `;
 
 export default function Footer() {
@@ -94,11 +94,11 @@ export default function Footer() {
         </StyledContainer>
       </BlackContainer>
       <StyledContainer maxWidth="xl">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
+        <Grid container>
+          <Grid item xs={6}>
             Logo
           </Grid>
-          <Grid item xs={12} md={6} textAlign="right">
+          <Grid item xs={6} textAlign="right">
             Copyright 2020 | SaunovacieStany.sk
           </Grid>
         </Grid>
