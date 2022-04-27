@@ -25,10 +25,12 @@ collections:
         file: "content/landing.md"
         fields:
           - { label: "Publish Date", name: "date", widget: "datetime" }
-          - label: "3 Options"
+          - label: "Options"
             name: "3-options"
             widget: list
             allow_add: false
+            max: 3
+            min: 3
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "string" }
