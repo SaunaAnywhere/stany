@@ -20,8 +20,6 @@ export default function Landing({
     "3-options": { title: string; description: string }[];
   };
 }) {
-  console.log("contentData", contentData["3-options"]);
-
   return (
     <>
       <ApplicationBar />
