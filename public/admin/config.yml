@@ -20,3 +20,15 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+      - label: "Landing"
+        name: "Landing"
+        file: "content/landing.md"
+        fields:
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - label: "3 Options"
+            name: "3-options"
+            widget: list
+            allow_add: false
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }

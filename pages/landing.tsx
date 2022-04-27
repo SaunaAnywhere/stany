@@ -1,4 +1,7 @@
 import { Grid } from "@mui/material";
+import { GetStaticProps } from "next";
+
+import { getContentData } from "../lib/content";
 import ApplicationBar from "../components/AppBar";
 import BlogPreview from "../components/BlogPreview";
 import ContentBox from "../components/ContentBox";
@@ -9,7 +12,16 @@ import ImgTextSlider from "../components/ImgTextSlider";
 import Options from "../components/Options";
 import SingleImage from "../components/SingleImage";
 
-export default function Landing() {
+export default function Landing({
+  contentData,
+}: {
+  contentData: {
+    date: string;
+    "3-options": { title: string; description: string }[];
+  };
+}) {
+  console.log("contentData", contentData["3-options"]);
+
   return (
     <>
       <ApplicationBar />
@@ -24,7 +36,7 @@ export default function Landing() {
           <ContentBox />
         </Grid>
         <Grid item xs={12}>
-          <Options />
+          <Options content={contentData["3-options"]} />
         </Grid>
         <Grid item xs={12}>
           <SingleImage />
@@ -42,3 +54,13 @@ export default function Landing() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const contentData = await getContentData("landing");
+
+  return {
+    props: {
+      contentData,
+    },
+  };
+};

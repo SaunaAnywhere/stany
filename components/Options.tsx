@@ -26,50 +26,28 @@ const OptionContent = styled(Box)`
   align-self: center;
 `;
 
-export default function Options() {
+export default function Options({ content }) {
+  const icons = [
+    <WorkspacePremiumIcon fontSize="large" key="1" />,
+    <LocalShippingIcon fontSize="large" key="2" />,
+    <QuickreplyIcon fontSize="large" key="3" />,
+  ];
+
   return (
     <StyledBox container>
-      <Option item sm={12} md={4} xl={3}>
-        <IconBox>
-          <WorkspacePremiumIcon fontSize="large" />
-        </IconBox>
-        <OptionContent>
-          <Typography variant="h5" fontWeight="500" component="div">
-            Garancia spokojnosti
-          </Typography>
-          <Typography variant="subtitle1" component="div">
-            Moznost vratenia stanu do 30 dni
-          </Typography>
-        </OptionContent>
-      </Option>
-
-      <Option item sm={12} md={4} xl={3}>
-        <IconBox>
-          <LocalShippingIcon fontSize="large" />
-        </IconBox>
-        <OptionContent>
-          <Typography variant="h5" fontWeight="500" component="div">
-            Doprava zdarma
-          </Typography>
-          <Typography variant="subtitle1" component="div">
-            Do 2km od Petrzalky
-          </Typography>
-        </OptionContent>
-      </Option>
-
-      <Option item sm={12} md={4} xl={3}>
-        <IconBox>
-          <QuickreplyIcon fontSize="large" />
-        </IconBox>
-        <OptionContent>
-          <Typography variant="h5" fontWeight="500" component="div">
-            Osobne prebratie
-          </Typography>
-          <Typography variant="subtitle1" component="div">
-            S moznostou instruktaze na Drazdiaku
-          </Typography>
-        </OptionContent>
-      </Option>
+      {content.map((option, i) => (
+        <Option item sm={12} md={4} xl={3} key={i}>
+          <IconBox>{icons[i]}</IconBox>
+          <OptionContent>
+            <Typography variant="h5" fontWeight="500" component="div">
+              {option.title}
+            </Typography>
+            <Typography variant="subtitle1" component="div">
+              {option.description}
+            </Typography>
+          </OptionContent>
+        </Option>
+      ))}
     </StyledBox>
   );
 }

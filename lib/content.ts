@@ -23,10 +23,7 @@ export async function getContentData(fileName: string) {
   return {
     fileName,
     contentHtml,
-    ...(matterResult.data as {
-      title: string;
-      cats: { description: string; name: string }[];
-    }),
+    ...matterResult.data,
     date: new Date(matterResult.data.date).toUTCString() as string,
   };
 }
